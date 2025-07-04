@@ -1,17 +1,16 @@
 import React from 'react';
-import { View, Text, Button } from 'react-native';
+import { View} from 'react-native';
 import { styles } from './styles';
+import CustomButton from '@components/CustomButton';
+import CustomTitle from '@components/CustomTitle';
 
-const DetailScreen = ({ navigation }) => {
+ const DetailScreen: React.FC<{ navigation: any }> = ({ navigation }) =>  {
     return (
         <View style={styles.container}>
-            <Text>This is the Details Page</Text>
-            <Button
-                title="Go Back"
-                onPress={() => navigation.goBack()}
-            />
+            <CustomTitle title={'Detail Screen'} testId='detail' />
+            <CustomButton title={'Go Back'} onPress={
+                () => navigation.pop()} />
         </View>
     );
-};
-
+}
 export default DetailScreen;

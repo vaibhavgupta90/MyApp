@@ -1,8 +1,11 @@
 import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import HomeScreen from '../src/screens/HomeScreen';
-import DetailScreen from '../src/screens/DetailScreen';
+import HomeScreen from '../screens/HomeScreen';
+import DetailScreen from '../screens/DetailScreen';
+import ProfileScreen from '../screens/ProfileScreen';
+import AboutScreen from '../screens/AboutScreen';
+
 
 
 
@@ -13,7 +16,9 @@ export default function RootNavigation() {
         <NavigationContainer>
         <Stack.Navigator initialRouteName= "Home" >
         <Stack.Screen name="Home" component = { HomeScreen } />
-            <Stack.Screen name="Details" component = { DetailScreen } />
+            <Stack.Screen name="Detail" component = { DetailScreen } />
+            <Stack.Screen name="Profile" component = { ProfileScreen } />
+            <Stack.Screen name="About" component = { AboutScreen } />
         </Stack.Navigator>
         </NavigationContainer>
   );

@@ -1,9 +1,11 @@
 import React from 'react';
-import ReactTestRenderer from 'react-test-renderer';
-import App from '../App';
+import { render } from '@testing-library/react-native';
+import App from '../App'; 
 
-test('renders correctly', async () => {
-  await ReactTestRenderer.act(() => {
-    ReactTestRenderer.create(<App />);
+describe('App Entry Point', () => {
+  it('renders the RootNavigation without crashing', () => {
+    const { getByText } = render(<App />);
+    expect(getByText('Home Screen')).toBeTruthy(); 
   });
 });
+
