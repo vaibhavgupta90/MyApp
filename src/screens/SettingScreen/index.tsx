@@ -23,7 +23,7 @@ const SettingScreen: React.FC<{ navigation: any }> = ({ navigation, route }) => 
             <CustomTitle title={'Settings Screen'} testId='about' />
             <CustomTitle title={`We have data id=${route.params.type}`} />
             <CustomButton title={'Settings'} onPress={
-                () => {}} />
+                () => { navigation.navigate('Authentication')}} />
         </View>
     );
 }
