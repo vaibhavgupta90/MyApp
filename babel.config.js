@@ -10,6 +10,8 @@ module.exports = {
           '@screens': './src/screens',
           '@utils': './src/utils',
           '@customHooks': './src/customHooks',
+          '@src': './src',
+          '@errorBoundries': './src/ErrorBoundries',
         },
       },
     ],
